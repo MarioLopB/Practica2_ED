@@ -165,6 +165,27 @@ public abstract class AbstractListWithRefTests {
 		assertEquals("(A B C D E )", S1.toString());
 	}
 
+	@Test(expected = IllegalArgumentException.class)
+	public void testAddNegativeTimes() throws Exception{
+		S2.add("A",-2);
+	}
+
+	@Test
+	public void testAddZeroTimes() throws Exception{
+		S2.add("A",0);
+		assertFalse(S2.contains("A"));
+	}
+
+	@Test(expected = NullPointerException.class)
+	public void testAddNull () throws Exception{
+		S1.add(null);
+	}
+
+	@Test(expected = NullPointerException.class)
+	public void testAddNullWithTimes () throws Exception{
+		S1.add(null,7);
+	}
+
 	@Test(expected = NullPointerException.class)
 	public void testRemoveNull() throws Exception{
 		S2.remove(null,3);
@@ -175,7 +196,7 @@ public abstract class AbstractListWithRefTests {
 		S2.remove("ABC",-2);
 	}
 
-	@Test(expected = NoSuchElementException.class)
+	@Test(expected = NullPointerException.class)
 	public void testRemoveNoElement() throws Exception{
 		S2.remove("231", 1);
 	}
@@ -202,7 +223,7 @@ public abstract class AbstractListWithRefTests {
 	}
 
 	@Test(expected = EmptyCollectionException.class)
-	public void testRemoveValorsEmpty() throws Exception{
+	public void testRemoveValorEmpty() throws Exception{
 		S1.remove("V",2);
 	}
 
@@ -243,6 +264,14 @@ public abstract class AbstractListWithRefTests {
 	}
 
 	@Test
+	public void testLastElementWithTwo () throws Exception{
+		S1.add("A", 2);
+		S1.add("B",2);
+		assertEquals(S1.remove("B", 3),2);
+		assertEquals(S1.toString(), "(A A )");
+	}
+
+	@Test
 	public void testIsEmpty() throws Exception{
 		assertTrue(S1.isEmpty());
 	}
@@ -255,6 +284,7 @@ public abstract class AbstractListWithRefTests {
 	@Test
 	public void testClear() throws Exception{
 		S2.clear();
+		assertTrue(S2.isEmpty());
 		assertEquals(S2.toString(), "()");
 	}
 
@@ -264,8 +294,31 @@ public abstract class AbstractListWithRefTests {
 	}
 
 	@Test
-	public void testMoreCount() throws Exception{
-		assertEquals(S2.count("XYZ"),10);
+	public void testAddImpliesContais () throws Exception{
+		S1.add("A",3);
+		assertTrue(S1.contains("A"));
 	}
 
+	@Test
+	public void testMoreCount() throws Exception{
+		assertEquals(S2.count("XYZ"),10);
+		assertEquals(S2.count("NOEX"),0);
+	}
+
+	@Test
+	public void testRemoveAllElements() throws Exception{
+		S1.add("A", 2);
+		assertEquals(S1.remove("A",3),2);
+		assertEquals(S1.toString(), "()");
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testRevoveEmptyNegative() throws Exception{
+		S1.remove("A",-2);
+	}
+
+	@Test(expected = NullPointerException.class)
+	public void testContainsNull() throws Exception{
+		S2.contains(null);
+	}
 }

@@ -158,15 +158,22 @@ public class ArrayListWithRepImpl<T> implements ListWithRep<T> {
 			@Override
 			public void add(T element, int times) {
 				// TODO
+				if(element == null)
+					throw new NullPointerException();
+				if(times < 0)
+					throw new IllegalArgumentException();
+
 				int rep = 0;
 
-				if(!(contains(element))){
-					if(this.count == this.data.length)
-						expandCapacity();
-					this.data[this.count] = new ElemListWithRep<T>(element, times);
-					this.count++;
-				} else{
-					this.data[this.search(element)].num += times;
+				if(times != 0){
+					if(!(contains(element))){
+						if(this.count == this.data.length)
+							expandCapacity();
+						this.data[this.count] = new ElemListWithRep<T>(element, times);
+						this.count++;
+					} else{
+						this.data[this.search(element)].num += times;
+					}
 				}
 
 			
@@ -175,7 +182,10 @@ public class ArrayListWithRepImpl<T> implements ListWithRep<T> {
 
 			@Override
 			public void add(T element) {
-				// TODO 
+				// TODO
+				if(element == null)
+					throw new NullPointerException();
+
 				if(!(contains(element))){
 					if(this.count == data.length)
 						expandCapacity();
@@ -191,17 +201,15 @@ public class ArrayListWithRepImpl<T> implements ListWithRep<T> {
 				// TODO
 				int removed = 0;
 
-				if(this.isEmpty()){
-					throw new EmptyCollectionException("Lista vacia");
-				} else if(element == null){
+				if(element == null){
 					throw new NullPointerException();
 				} else if(times < 0){
 					throw  new IllegalArgumentException();
 				} else if(times == 0){
 					return 0;
-				}
-
-				if(this.search(element) < 0){
+				} else if(this.isEmpty()){
+					throw new EmptyCollectionException("Lista vacia");
+				} else if(this.search(element) < 0){
 					throw new NoSuchElementException();
 				}
 
@@ -257,6 +265,9 @@ public class ArrayListWithRepImpl<T> implements ListWithRep<T> {
 			@Override
 			public boolean contains(T element) {
 				// TODO
+				if(element == null)
+					throw new NullPointerException();
+
 				int index = 0;
 				boolean exist = false;
 
@@ -306,13 +317,16 @@ public class ArrayListWithRepImpl<T> implements ListWithRep<T> {
 				int index = 0;
 				boolean equal = false;
 
-				while (!equal){
-					if(data[index].elem.equals(element)){
-						instances = data[index].num;
-						equal = true;
+				if(this.contains(element)){
+					while (!equal){
+						if(data[index].elem.equals(element)){
+							instances = data[index].num;
+							equal = true;
+						}
+						index++;
 					}
-					index++;
 				}
+
 
 				return instances;
 			}

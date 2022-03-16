@@ -125,6 +125,9 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 	@Override
 	public void add(T element) {
 		//TODO
+		if(element == null)
+			throw new NullPointerException();
+
 		if(!(contains(element))){
 			ListWithRepNode<T> node = new ListWithRepNode<T>(element, 1);
 			ListWithRepNode<T> current = this.front;
@@ -148,24 +151,30 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 	@Override
 	public void add(T element, int times) {
 		//TODO
+		if(element == null)
+			throw new NullPointerException();
+		if(times < 0)
+			throw new IllegalArgumentException();
 
-		if(!(contains(element))){
-			ListWithRepNode<T> node = new ListWithRepNode<T>(element, times);
-			ListWithRepNode<T> current = this.front;
+		if(times != 0){
+			if(!(contains(element))){
+				ListWithRepNode<T> node = new ListWithRepNode<T>(element, times);
+				ListWithRepNode<T> current = this.front;
 
-			if(this.isEmpty()){
-				this.front = node;
+				if(this.isEmpty()){
+					this.front = node;
 
-			} else{
-				while((current != null) && (current.next != null)){
-					current = current.next;
+				} else{
+					while((current != null) && (current.next != null)){
+						current = current.next;
+					}
+					current.next = node;
 				}
-				current.next = node;
-			}
 
-			this.count++;
-		} else{
-			this.search(element).num += times;
+				this.count++;
+			} else{
+				this.search(element).num += times;
+			}
 		}
 
     }
@@ -176,15 +185,14 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 		boolean found = false;
 		ListWithRepNode<T> previous, current;
 		int result = 0;
-		if (isEmpty())
-			throw new EmptyCollectionException("Lista Vacia");
-		if(times < 0){
+		if (element == null)
+			throw new NullPointerException();
+		if(times < 0)
 			throw new IllegalArgumentException();
-		}
 		if(times == 0)
 			return 0;
-		if(element == null)
-			throw new NullPointerException();
+		if(this.isEmpty())
+			throw new EmptyCollectionException("Lista vacia");
 		if(this.search(element) == null)
 			throw new NoSuchElementException();
 		if (this.front.elem.equals(search(element).elem)){
@@ -222,6 +230,9 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 	@Override
 	public boolean contains(T element) {
 		//TODO
+		if(element == null)
+			throw new NullPointerException();
+
 		ListWithRepNode<T> current = this.front;
 
 		int i = 1;
@@ -294,7 +305,10 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 		if(element == null){
 			throw new NullPointerException();
 		}
-		int instances = this.search(element).num;
+		int instances = 0;
+
+		if(this.contains(element))
+			instances = this.search(element).num;
 
 		return instances;
 	}
