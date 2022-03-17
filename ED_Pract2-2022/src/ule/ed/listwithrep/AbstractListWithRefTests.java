@@ -289,9 +289,14 @@ public abstract class AbstractListWithRefTests {
 
 	@Test
 	public void testClear() throws Exception{
-		S2.clear();
-		assertTrue(S2.isEmpty());
-		assertEquals(S2.toString(), "()");
+		S1.add("A");
+		S1.add("B");
+		S1.add("C");
+		assertEquals(S1.size(),3);
+		S1.clear();
+		assertEquals(S1.size(),0);
+		assertTrue(S1.isEmpty());
+		assertFalse(S1.contains("B"));
 	}
 
 	@Test(expected = NullPointerException.class)

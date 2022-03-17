@@ -292,11 +292,8 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 	@Override
 	public void clear() {
 		//TODO
-		ListWithRepNode<T> current = this.front;
-		while(this.count != 0){
-			current = current.next;
-			this.count--;
-		}
+		this.front = null;
+		this.count = 0;
 	}
 
 	@Override
