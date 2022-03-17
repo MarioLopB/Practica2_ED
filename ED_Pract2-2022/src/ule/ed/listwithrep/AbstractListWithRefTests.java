@@ -4,6 +4,7 @@ package ule.ed.listwithrep;
 import static org.junit.Assert.*;
 
 
+import java.beans.Transient;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -261,6 +262,12 @@ public abstract class AbstractListWithRefTests {
 		S1.add("C",3);
 		assertEquals(S1.remove("C",3),3);
 		assertEquals(S1.toString(), "(A A B B )");
+	}
+
+	@Test
+	public void testRemoveOne() throws Exception{
+		S1.add("A");
+		assertEquals(S1.remove(),1);
 	}
 
 	@Test

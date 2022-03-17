@@ -4,7 +4,6 @@
     <list default="true" id="696be2eb-bc24-41ee-b3af-2cc6b2b86fa2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ule/ed/listwithrep/AbstractListWithRefTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ule/ed/listwithrep/AbstractListWithRefTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ule/ed/listwithrep/LinkedListWithRepImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ule/ed/listwithrep/LinkedListWithRepImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +30,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListWithRepRefTests.testClear">
+  <component name="RunManager" selected="JUnit.LinkedListWithRepRefTests.testRemoveOne">
     <configuration name="ArrayListWithRepRefTests.testClear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ED_Pract2-2022" />
       <extension name="coverage">
@@ -48,7 +47,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListWithRepRefTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArrayListWithRepRefTests.testRemoveOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ED_Pract2-2022" />
       <extension name="coverage">
         <pattern>
@@ -57,8 +56,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ule.ed.listwithrep" />
-      <option name="MAIN_CLASS_NAME" value="ule.ed.listwithrep.LinkedListWithRepRefTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="ule.ed.listwithrep.ArrayListWithRepRefTests" />
+      <option name="METHOD_NAME" value="testRemoveOne" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -74,22 +74,6 @@
       <option name="PACKAGE_NAME" value="ule.ed.listwithrep" />
       <option name="MAIN_CLASS_NAME" value="ule.ed.listwithrep.LinkedListWithRepRefTests" />
       <option name="METHOD_NAME" value="testClear" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LinkedListWithRepRefTests.testIteratorRepNoNext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ED_Pract2-2022" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ule.ed.listwithrep.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ule.ed.listwithrep" />
-      <option name="MAIN_CLASS_NAME" value="ule.ed.listwithrep.LinkedListWithRepRefTests" />
-      <option name="METHOD_NAME" value="testIteratorRepNoNext" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,12 +95,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LinkedListWithRepRefTests.testRemoveOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ED_Pract2-2022" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ule.ed.listwithrep.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ule.ed.listwithrep" />
+      <option name="MAIN_CLASS_NAME" value="ule.ed.listwithrep.LinkedListWithRepRefTests" />
+      <option name="METHOD_NAME" value="testRemoveOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LinkedListWithRepRefTests.testRemoveOne" />
+        <item itemvalue="JUnit.ArrayListWithRepRefTests.testRemoveOne" />
         <item itemvalue="JUnit.LinkedListWithRepRefTests.testClear" />
         <item itemvalue="JUnit.ArrayListWithRepRefTests.testClear" />
-        <item itemvalue="JUnit.LinkedListWithRepRefTests.testClear" />
-        <item itemvalue="JUnit.LinkedListWithRepRefTests.testClear" />
         <item itemvalue="JUnit.LinkedListWithRepRefTests.testClear" />
       </list>
     </recent_temporary>
@@ -132,7 +132,7 @@
       <workItem from="1647424614116" duration="626000" />
       <workItem from="1647425416571" duration="229000" />
       <workItem from="1647425658690" duration="7895000" />
-      <workItem from="1647537191416" duration="11386000" />
+      <workItem from="1647537191416" duration="11849000" />
     </task>
     <servers />
   </component>
@@ -144,17 +144,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ule/ed/listwithrep/AbstractListWithRefTests.java</url>
-          <line>136</line>
+          <line>137</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ule/ed/listwithrep/AbstractListWithRefTests.java</url>
-          <line>275</line>
+          <line>282</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ule/ed/listwithrep/AbstractListWithRefTests.java</url>
-          <line>298</line>
+          <line>305</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
