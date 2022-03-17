@@ -177,7 +177,7 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 			}
 		}
 
-    }
+	}
 
 	@Override
 	public int remove(T element, int times) throws EmptyCollectionException{
@@ -205,28 +205,28 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 				this.count--;
 			}
 		} else{
-				if(times < this.search(element).num){
-					result = times;
-					this.search(element).num = this.search(element).num - times;
-				} else if(times >= this.search(element).num){
-					previous = this.front;
-					current = this.front.next;
-					for(int index = 1; index < this.count; index++) {
-						if (current.elem != this.search(element).elem) {
-							previous = current;
-							current = current.next;
-						}
+			if(times < this.search(element).num){
+				result = times;
+				this.search(element).num = this.search(element).num - times;
+			} else if(times >= this.search(element).num){
+				previous = this.front;
+				current = this.front.next;
+				for(int index = 1; index < this.count; index++) {
+					if (current.elem != this.search(element).elem) {
+						previous = current;
+						current = current.next;
 					}
-					result = search(element).num;
-					previous.next = current.next;
-					this.count--;
 				}
+				result = search(element).num;
+				previous.next = current.next;
+				this.count--;
+			}
 		}
 		return result;
 
 	}
 
-	
+
 	@Override
 	public boolean contains(T element) {
 		//TODO
@@ -261,13 +261,13 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 		}
 
 		return instances;
-		
+
 	}
 
 	@Override
 	public boolean isEmpty() {
 		//TODO
-	   boolean exist = false;
+		boolean exist = false;
 
 		if(this.count == 0){
 			exist = true;
@@ -283,11 +283,11 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 			throw new EmptyCollectionException("Lista vacia");
 
 		if(this.front != null){
-				removed = this.front.num;
-				this.front = this.front.next;
-			}
+			removed = this.front.num;
+			this.front = this.front.next;
+		}
 		return removed;
-    }
+	}
 
 	@Override
 	public void clear() {
@@ -312,7 +312,7 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 
 		return instances;
 	}
-	
+
 	@Override
 	public Iterator<T> iterator() {
 		//TODO
@@ -321,16 +321,16 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 
 	@Override
 	public Iterator<T> iteratorRep() {
-		// TODO 
+		// TODO
 		return new LinkedListWithRepIteratorRep<T>(this.front, this.count);
 	}
 	@Override
 	public String toString() {
 		//TODO
 		StringBuffer buffer = new StringBuffer();
-		
+
 		buffer.append("(");
-		
+
 		// TODO Ir añadiendo en buffer las cadenas para la representación de la cola. Ejemplo: (A A A B )
 		ListWithRepNode<T> current = this.front;
 
@@ -341,16 +341,16 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 			current = current.next;
 		}
 		// Se concatena cada elemento seguido por un espacio
-		
+
 		buffer.append(")");
 		return buffer.toString();
 	}
 
-	
 
-	
 
-	
-	
+
+
+
+
 
 }

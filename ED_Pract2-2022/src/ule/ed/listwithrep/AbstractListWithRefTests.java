@@ -196,7 +196,7 @@ public abstract class AbstractListWithRefTests {
 		S2.remove("ABC",-2);
 	}
 
-	@Test(expected = NullPointerException.class)
+	@Test(expected = NoSuchElementException.class)
 	public void testRemoveNoElement() throws Exception{
 		S2.remove("231", 1);
 	}

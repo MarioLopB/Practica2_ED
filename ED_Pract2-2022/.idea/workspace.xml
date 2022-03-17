@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="696be2eb-bc24-41ee-b3af-2cc6b2b86fa2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ED_Pract2-2022.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ED_Pract2-2022.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ule/ed/listwithrep/AbstractListWithRefTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ule/ed/listwithrep/AbstractListWithRefTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ule/ed/listwithrep/ArrayListWithRepImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ule/ed/listwithrep/ArrayListWithRepImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ule/ed/listwithrep/LinkedListWithRepImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ule/ed/listwithrep/LinkedListWithRepImpl.java" afterDir="false" />
@@ -36,8 +32,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListWithRepRefTests.testClear">
-    <configuration name="ArrayListWithRepRefTests.testAddNegativeTimes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LinkedListWithRepRefTests">
+    <configuration name="ArrayListWithRepRefTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ED_Pract2-2022" />
       <extension name="coverage">
         <pattern>
@@ -47,8 +43,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ule.ed.listwithrep" />
       <option name="MAIN_CLASS_NAME" value="ule.ed.listwithrep.ArrayListWithRepRefTests" />
-      <option name="METHOD_NAME" value="testAddNegativeTimes" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -69,7 +64,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArrayListWithRepRefTests.testRemoveValorEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedListWithRepRefTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ED_Pract2-2022" />
       <extension name="coverage">
         <pattern>
@@ -78,9 +73,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ule.ed.listwithrep" />
-      <option name="MAIN_CLASS_NAME" value="ule.ed.listwithrep.ArrayListWithRepRefTests" />
-      <option name="METHOD_NAME" value="testRemoveValorEmpty" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="ule.ed.listwithrep.LinkedListWithRepRefTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,11 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LinkedListWithRepRefTests" />
+        <item itemvalue="JUnit.ArrayListWithRepRefTests" />
+        <item itemvalue="JUnit.ArrayListWithRepRefTests" />
         <item itemvalue="JUnit.LinkedListWithRepRefTests.testClear" />
         <item itemvalue="JUnit.ArrayListWithRepRefTests.testClear" />
-        <item itemvalue="JUnit.ArrayListWithRepRefTests.testAddNegativeTimes" />
-        <item itemvalue="JUnit.LinkedListWithRepRefTests.testRemoveValorEmpty" />
-        <item itemvalue="JUnit.ArrayListWithRepRefTests.testRemoveValorEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -138,31 +132,11 @@
       <workItem from="1647424614116" duration="626000" />
       <workItem from="1647425416571" duration="229000" />
       <workItem from="1647425658690" duration="7895000" />
+      <workItem from="1647537191416" duration="660000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ule/ed/listwithrep/AbstractListWithRefTests.java</url>
-          <line>200</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ule/ed/listwithrep/ArrayListWithRepImpl.java</url>
-          <line>311</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ule/ed/listwithrep/AbstractListWithRefTests.java</url>
-          <line>180</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
