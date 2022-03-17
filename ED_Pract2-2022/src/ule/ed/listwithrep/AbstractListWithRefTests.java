@@ -143,7 +143,7 @@ public abstract class AbstractListWithRefTests {
 	@Test (expected = NoSuchElementException.class)
 	public void testIteratorRepNoNext() throws Exception{
 		Iterator<String> oIt = S2.iteratorRep();
-		for(int i = 0; i < S2.size(); i++){
+		for(int i = 0; i < S2.size()+1; i++){
 			oIt.next();
 		}
 	}
@@ -265,10 +265,16 @@ public abstract class AbstractListWithRefTests {
 
 	@Test
 	public void testLastElementWithTwo () throws Exception{
-		S1.add("A", 2);
-		S1.add("B",2);
-		assertEquals(S1.remove("B", 3),2);
-		assertEquals(S1.toString(), "(A A )");
+		S1.add("A",3);
+		S1.add("B");
+		S1.add("C");
+		assertTrue(S1.contains("A"));
+		assertEquals(S1.size(),5);
+		assertEquals(S1.remove(), 3);
+		assertFalse(S1.contains("A"));
+		assertTrue(S1.contains("B"));
+		assertEquals(S1.size(),2);
+		assertEquals(S1.toString(),"(B C )");
 	}
 
 	@Test

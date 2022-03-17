@@ -4,7 +4,7 @@ import java.beans.PropertyEditorSupport;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import jdk.jshell.spi.SPIResolutionException;
+//import jdk.jshell.spi.SPIResolutionException;
 import ule.ed.exceptions.EmptyCollectionException;
 
 import javax.swing.*;
@@ -91,14 +91,13 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 			if (!hasNext())
 				throw new NoSuchElementException();
 
-			T result = null;
+			T result = this.current.elem;
 
-			if (this.counter < this.current.num-1) {
-				result = this.current.elem;
-				counter++;
-			} else {
-				result = this.current.elem;
+			if (this.counter == this.current.num-1) {
 				this.current = current.next;
+				this.counter = 0;
+			} else {
+				this.counter++;
 			}
 
 			return result;
@@ -112,7 +111,7 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 		boolean exist = false;
 
 		while((current != null) && !exist){
-			if(current.elem == element){
+			if(current.elem.equals(element)){
 				exist = true;
 			}else {
 				current = current.next;
@@ -239,7 +238,7 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 		boolean exist = false;
 
 		while((current != null) && !exist){
-			if(current.elem == element){
+			if(current.elem.equals(element)){
 				exist = true;
 			}
 			i++;
@@ -285,6 +284,7 @@ public class LinkedListWithRepImpl<T> implements ListWithRep<T> {
 		if(this.front != null){
 			removed = this.front.num;
 			this.front = this.front.next;
+			this.count--;
 		}
 		return removed;
 	}

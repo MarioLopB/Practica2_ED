@@ -48,7 +48,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArrayListWithRepRefTests.testClear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArrayListWithRepRefTests.testIteratorRepNoNext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ED_Pract2-2022" />
       <extension name="coverage">
         <pattern>
@@ -58,7 +58,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ule.ed.listwithrep" />
       <option name="MAIN_CLASS_NAME" value="ule.ed.listwithrep.ArrayListWithRepRefTests" />
-      <option name="METHOD_NAME" value="testClear" />
+      <option name="METHOD_NAME" value="testIteratorRepNoNext" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,7 +79,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListWithRepRefTests.testClear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedListWithRepRefTests.testIteratorRepNoNext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ED_Pract2-2022" />
       <extension name="coverage">
         <pattern>
@@ -89,13 +89,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ule.ed.listwithrep" />
       <option name="MAIN_CLASS_NAME" value="ule.ed.listwithrep.LinkedListWithRepRefTests" />
-      <option name="METHOD_NAME" value="testClear" />
+      <option name="METHOD_NAME" value="testIteratorRepNoNext" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListWithRepRefTests.testRemoveValorEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedListWithRepRefTests.testLastElementWithTwo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ED_Pract2-2022" />
       <extension name="coverage">
         <pattern>
@@ -105,7 +105,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ule.ed.listwithrep" />
       <option name="MAIN_CLASS_NAME" value="ule.ed.listwithrep.LinkedListWithRepRefTests" />
-      <option name="METHOD_NAME" value="testRemoveValorEmpty" />
+      <option name="METHOD_NAME" value="testLastElementWithTwo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,9 +115,9 @@
       <list>
         <item itemvalue="JUnit.LinkedListWithRepRefTests" />
         <item itemvalue="JUnit.ArrayListWithRepRefTests" />
-        <item itemvalue="JUnit.ArrayListWithRepRefTests" />
-        <item itemvalue="JUnit.LinkedListWithRepRefTests.testClear" />
-        <item itemvalue="JUnit.ArrayListWithRepRefTests.testClear" />
+        <item itemvalue="JUnit.LinkedListWithRepRefTests.testLastElementWithTwo" />
+        <item itemvalue="JUnit.LinkedListWithRepRefTests.testLastElementWithTwo" />
+        <item itemvalue="JUnit.LinkedListWithRepRefTests" />
       </list>
     </recent_temporary>
   </component>
@@ -132,11 +132,32 @@
       <workItem from="1647424614116" duration="626000" />
       <workItem from="1647425416571" duration="229000" />
       <workItem from="1647425658690" duration="7895000" />
-      <workItem from="1647537191416" duration="660000" />
+      <workItem from="1647537191416" duration="9422000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ule/ed/listwithrep/AbstractListWithRefTests.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ule/ed/listwithrep/AbstractListWithRefTests.java</url>
+          <line>275</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ule/ed/listwithrep/LinkedListWithRepImpl.java</url>
+          <line>253</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

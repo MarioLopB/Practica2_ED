@@ -80,7 +80,7 @@ public class ArrayListWithRepImpl<T> implements ListWithRep<T> {
 
 			items = cola;
 			this.count = count;
-			current = 1;
+			current = 0;
 			counter = 0;
 
 		}
@@ -99,13 +99,16 @@ public class ArrayListWithRepImpl<T> implements ListWithRep<T> {
 			if(!hasNext())
 				throw new NoSuchElementException();
 
-			if(this.counter < this.items[this.current-1].num){
-				this.counter++;
-			} else{
+			T elem = this.items[this.current].elem;
+
+			if(this.counter == this.items[this.current].num-1){
 				this.current++;
+				this.counter = 0;
+			} else{
+				this.counter++;
 			}
 
-			return this.items[this.current-1].elem;
+			return elem;
 		}
 
 
@@ -232,6 +235,7 @@ public class ArrayListWithRepImpl<T> implements ListWithRep<T> {
 
 	}
 
+	//Arreglar con bucle.
 	@Override
 	public int remove() throws EmptyCollectionException {
 		// TODO
@@ -239,11 +243,19 @@ public class ArrayListWithRepImpl<T> implements ListWithRep<T> {
 			throw new EmptyCollectionException("Lista vacia");
 		}
 
-		int  removed = this.data[0].num;
-		this.data[0] = this.data[1];
-		this.data[1] = this.data[count-1];
-		this.data[count-1] = null;
-		this.count--;
+		int removed;
+
+		if(this.count > 1){
+			removed = this.data[0].num;
+			for(int i = 0; i < this.count-1;i++){
+				this.data[i]=data[i+1];
+			}
+			count--;
+		} else{
+			removed = this.data[0].num;
+			this.data[0] = null;
+			count--;
+		}
 
 		return removed;
 
